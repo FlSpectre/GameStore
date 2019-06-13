@@ -4,17 +4,128 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" type="text/css" media="screen" href="style.css"/>
-    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
     <title>GameStore</title>
   </head>
   <body>
-    
-    <div id="container"></div>
-
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity='sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=' crossorigin='anonymous'></script>
+    <div id="container">
+      <ul>
+        <img id="logo" src="images/gamestore_logo.png" /><img
+          id="basket"
+          src="images/shopping_basket.png"
+        />
+        <li class="list"><a href="#">Home</a></li>
+        <li class="dropdown list">
+          <a href="/home/spectre/Bureau/GameStore/games.html" class="dropbtn"
+            >GAMES</a
+          >
+          <div class="dropdown-content">
+            <a
+              href="/home/spectre/Bureau/GameStore/games.html"
+              onclick="call_categories(0)"
+              >Action</a
+            ><a
+              href="/home/spectre/Bureau/GameStore/games.html"
+              onclick="call_categories(1)"
+              >Fighting</a
+            ><a
+              href="/home/spectre/Bureau/GameStore/games.html"
+              onclick="call_categories(2)"
+              >RPG</a
+            ><a
+              href="/home/spectre/Bureau/GameStore/games.html"
+              onclick="call_categories(3)"
+              >Arcade</a
+            ><a
+              href="/home/spectre/Bureau/GameStore/games.html"
+              onclick="call_categories(4)"
+              >MOBA</a
+            ><a
+              href="/home/spectre/Bureau/GameStore/games.html"
+              onclick="call_categories(5)"
+              >MMORPG</a
+            ><a
+              href="/home/spectre/Bureau/GameStore/games.html"
+              onclick="call_categories(6)"
+              >FPS</a
+            >
+          </div>
+        </li>
+        <li class="list"><a href="#">GameStore Plus</a></li>
+        <li class="list"><a href="#">Store</a></li>
+        <li class="list"><a href="#">Help</a></li>
+      </ul>
+      <header>
+        <h1 id="title">GameStore</h1>
+        <p class="paragraphe">
+          Do business on games, extensions, pre-orders and more. <br />
+          Even more discounts for GameStore Plus subscribers.
+        </p>
+      </header>
+      <div id="gotm">
+        <h1 id="title_gotm">Games Of The Moment</h1>
+        <div id="div_gotm">
+          <div class="games_of_the_moment">
+            <div class="fiche">
+              <h1 class="titlesGOTM">Super Smash Bros : Ultimate</h1>
+              <div class="div_images">
+                <p class="synopsis">
+                  Super Smash Bros Ultimate is a Fighting game on Switch. This
+                  Ultimate opus brings together all the fighters already
+                  appeared in the history of Super Smash Bros. 75 playable
+                  characters will be available by counting the trainer, as well
+                  as all his Pokémon...
+                </p>
+                <p class="note">Note : 16.2</p>
+              </div>
+              <img src="images/SSBU.png" />
+            </div>
+          </div>
+          <div class="games_of_the_moment">
+            <div class="fiche">
+              <h1 class="titlesGOTM">The Last of Us</h1>
+              <div class="div_images">
+                <p class="synopsis">
+                  The survival action The Last of Us on PS3 follows Joel and
+                  Ellie across the United States. The two will have to help each
+                  other to survive a mysterious plague. Nature begins to
+                  appropriate the abandoned cities and the few survivors kill
+                  each other to recover the little food and weapons still
+                  present.
+                </p>
+                <p class="note">Note : 16.8</p>
+              </div>
+              <img src="images/TLOU.jpg" />
+            </div>
+          </div>
+          <div class="games_of_the_moment">
+            <div class="fiche">
+              <h1 class="titlesGOTM">League of Legends</h1>
+              <div class="div_images">
+                <p class="synopsis">
+                  League of Legends is a MOBA, a multiplayer online battle
+                  arena. In the classic mode, two teams of five players compete
+                  in games that last on average between 40 minutes and the goal
+                  is to destroy the enemy base. Playing in a hero-fantasy
+                  universe, each player embodies a different champion, with
+                  unique abilities, which he chooses at the beginning of the
+                  game. Random modes are also present, as well as seasonal
+                  events that bring a breath of novelty.
+                </p>
+                <p class="note">Note : 15.7</p>
+              </div>
+              <img src="images/LOL.jpg" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
     <script src="front.js"></script>
-    
-
   </body>
 </html>

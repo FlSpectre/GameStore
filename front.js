@@ -3,6 +3,14 @@ $.get("http://localhost:3000/", function(res) {
   make_gotm(db);
 });
 
+var catego = ["Action", "Fighting", "RPG", "Arcade", "MOBA", "MMORPG", "FPS"];
+
+function call_categories(index) {
+  $.get("http://localhost:3000/" + catego[index], function(res) {
+    var db = res;
+    console.log(db);
+  });
+}
 var container = document.getElementById("container");
 
 var header = document.createElement("header");
@@ -29,7 +37,6 @@ container.appendChild(ul);
 ul.appendChild(logo);
 ul.appendChild(basket);
 
-var catego = ["Action", "Fighting", "RPG", "Arcade", "MOBA", "MMORPG", "FPS"];
 var ref = ["", "", "", "", "", "", ""];
 
 for (let i = 0; i < 5; i++) {
@@ -46,10 +53,7 @@ for (let i = 0; i < 5; i++) {
     didiv.setAttribute("id", "div_li");
 
     var non = document.createElement("a");
-    non.setAttribute(
-      "href",
-      "/home/spectre/Bureau/GameStore2/GameStore/games.html"
-    );
+    non.setAttribute("href", "/home/spectre/Bureau/GameStore/games.html");
     non.setAttribute("class", "dropbtn");
     non.textContent = "GAMES";
     list.appendChild(non);
@@ -59,11 +63,8 @@ for (let i = 0; i < 5; i++) {
     list.appendChild(div_drop);
     for (var j = 0; j < catego.length; j++) {
       var oui = document.createElement("a");
-      oui.setAttribute(
-        "href",
-        "/home/spectre/Bureau/GameStore2/GameStore/games.html"
-      );
-      oui.setAttribute("onclick", catego);
+      oui.setAttribute("href", "/home/spectre/Bureau/GameStore/games.html");
+      oui.setAttribute("onClick", "call_categories(" + j + ")");
       oui.textContent = catego[j];
       div_drop.appendChild(oui);
     }
